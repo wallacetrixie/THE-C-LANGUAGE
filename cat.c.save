@@ -1,0 +1,32 @@
+#include <stdio.h>
+int main()
+{
+    int subject1,subject2,subject3,average;
+    int p,g,w;
+    average=(subject1+subject2+subject3)/3;
+    printf("Enter the score of your first subject:");
+    scanf("%d",&subject1);
+    printf("Enter the score of your second subject:");
+    scanf("%d",&subject2);
+    printf("Enter the score of your third subject:");
+    scanf("%d",&subject3);
+    p=((subject1<40)||(subject2<40)||(subject3<40));
+    g=((subject1>100)||(subject2>100)||(subject3>100));
+    average=(subject1+subject2+subject3)/3;
+    w=p+g;
+    if(w==2)
+    {printf("One or more of your marks is below 40 and One or more of your grade is above the Maximum Mark");}
+    else if(p==1)
+    {printf("You do not meet graduation requirements");}
+    else if(g==1)
+    {printf("One of more of your grades is more that the maximum mark");}
+    else if(average>=70)
+    {printf("First Class Honours");}
+    else if(average>=60)
+    {printf("Second Class Honours:Upper Division");}
+    else if(average>=50)
+    {printf("Second Class Honours:Lower Division Division");}
+    else if(average>=40<=49)
+    {printf("Pass");}
+    return 0;
+}

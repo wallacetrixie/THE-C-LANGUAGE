@@ -1,0 +1,29 @@
+#include<stdio.h>
+
+int main()
+{
+ int sum=0;
+ int w;
+ int max;
+ int arr[10];
+ max=arr[0];
+ for(int i=0;i<=9;i++)
+ {
+     printf("Enter the %d element:",i+1);
+     scanf("%d",&arr[i]);
+ }
+ for(w=0;w<=9;w++)
+ {
+     printf("%d\n",arr[w]);
+     sum=sum+arr[w];
+ }
+ printf("The sum of the elements in the array is %d\n",sum);
+ for(int k=0;k<=9;k++)
+ {
+     if(max<arr[k])
+        {
+            max=arr[k];
+            printf("%d",max);
+        }
+ }
+}
